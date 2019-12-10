@@ -9,11 +9,10 @@
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->
-                <div class="row">
-                    <div class="col-sm-6 mt-3 ">
-                        <?= $this->session->flashdata('message'); ?>
-                    </div>
-                </div>
+                <?php if ($this->session->flashdata('message')) : ?>
+
+                    <div class="flash-user" data-user="<?= $this->session->flashdata('message'); ?>"></div>
+                <?php endif; ?>
             </section>
 
             <!-- Main content -->

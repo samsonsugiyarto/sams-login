@@ -33,8 +33,8 @@ class Admin extends CI_Controller
             $this->load->template('admin/role', $data);
         } else {
             $this->Role->insertRole();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            New Role added!</div>');
+            $this->session->set_flashdata('message', '
+            Ditambahkan!');
             redirect('admin/role');
         }
     }
@@ -50,8 +50,7 @@ class Admin extends CI_Controller
             $this->load->template('admin/role', $data);
         } else {
             $this->Role->ubahDataRole();
-            $this->session->set_flashdata('message', '<div class="alert
-            alert-success" role="alert"> Role Berhasil Diubah!</div>');
+            $this->session->set_flashdata('message', 'Diubah!');
             redirect('admin/role');
         }
     }
@@ -59,8 +58,7 @@ class Admin extends CI_Controller
     public function hapusrole()
     {
         $this->Role->hapusDataRole();
-        $this->session->set_flashdata('message', '<div class="alert
-        alert-success" role="alert"> Role Berhasil Dihapus!</div>');
+        $this->session->set_flashdata('message', 'Dihapus!');
         redirect('admin/role');
     }
 

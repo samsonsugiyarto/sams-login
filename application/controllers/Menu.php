@@ -25,8 +25,7 @@ class Menu extends CI_Controller
         } else {
 
             $this->Menu->insertMenu();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-           New menu added!</div>');
+            $this->session->set_flashdata('message', 'New menu added!');
             redirect('menu');
         }
     }
@@ -42,8 +41,7 @@ class Menu extends CI_Controller
             $this->load->template('menu/index', $data);
         } else {
             $this->Menu->ubahDataMenu();
-            $this->session->set_flashdata('message', '<div class="alert
-            alert-success" role="alert"> Menu Berhasil Diubah!</div>');
+            $this->session->set_flashdata('message', 'Menu Berhasil Diubah!');
             redirect('menu');
         }
     }
@@ -51,8 +49,7 @@ class Menu extends CI_Controller
     public function hapusmenu()
     {
         $this->Menu->hapusDataMenu();
-        $this->session->set_flashdata('message', '<div class="alert
-        alert-success" role="alert"> Menu Berhasil Dihapus!</div>');
+        $this->session->set_flashdata('message', 'Menu Berhasil Dihapus!');
         redirect('menu');
     }
 
@@ -81,8 +78,7 @@ class Menu extends CI_Controller
         } else {
 
             $this->Menu->insertSubMenu();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            New sub menu added!</div>');
+            $this->session->set_flashdata('message', 'New sub menu added!');
             redirect('menu/submenu');
         }
     }
@@ -107,8 +103,7 @@ class Menu extends CI_Controller
             $this->load->view('templates/footer');
         } else {
             $this->Menu->ubahDataSubMenu();
-            $this->session->set_flashdata('message', '<div class="alert
-            alert-success" role="alert"> Sub Menu Berhasil Diubah!</div>');
+            $this->session->set_flashdata('message', 'Sub Menu Berhasil Diubah!');
             redirect('menu/submenu');
         }
     }
@@ -116,8 +111,7 @@ class Menu extends CI_Controller
     public function hapussubmenu()
     {
         $this->Menu->hapusSubMenu();
-        $this->session->set_flashdata('message', '<div class="alert
-        alert-success" role="alert"> Sub Menu Berhasil Dihapus!</div>');
+        $this->session->set_flashdata('message', 'Sub Menu Berhasil Dihapus!');
         redirect('menu/submenu');
     }
 }
